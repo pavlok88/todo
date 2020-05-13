@@ -1,0 +1,137 @@
+:root {
+    --line-h: 30px;
+
+}
+
+body {
+    margin: 20px;
+    font-weight: bold;
+    font-family: 'Roboto', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+/* -------------------------------------------------------------- */
+button {
+    min-width: 100px;
+    /* border-radius: 5px; */
+    border: none;
+    color: rgb(255, 255, 255);
+    box-shadow: 0px 1px 4px black;
+    font-family: 'Roboto', sans-serif;
+    text-align: center;
+    text-shadow: 0px 0px 4px black;
+    user-select: none;
+}
+
+#createTaskBtn {
+    background: linear-gradient(#4f5bfd, #020080);
+}
+
+.delBtn,
+.delTasksBtn {
+    background: linear-gradient(#fd4f4f, #800000);
+}
+
+.doneBtn {
+    background: linear-gradient(#81fd4f, #0b8000);
+}
+
+button:hover {
+    box-shadow: 0px 4px 7px black;
+}
+
+#createTaskBtn:active {
+    background: linear-gradient(#7f81ff, #505dce);
+}
+
+.delBtn:active,
+.delTasksBtn:active {
+    background: linear-gradient(#ff7f7f, #ce5050);
+}
+
+.doneBtn:active {
+    background: linear-gradient(#a3ff7f, #59ce50);
+}
+
+/* ------------------------------------------------------------------- */
+.todoContainer {
+    display: flex;
+    flex-direction: column;
+    min-width: 400px;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    background: linear-gradient(#89c0ff, #aefff1);
+}
+
+.inputTasksContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inputTasksContainer>* {
+    height: var(--line-h);
+    line-height: var(--line-h);
+}
+
+.inputTasksContainer>input {
+    box-shadow: 0px 0px 7px rgb(52, 255, 1);
+    border: 1px solid rgb(52, 255, 1);
+    width: 100%
+}
+
+.invalidstyle {
+    /* border: 4px solid red; */
+    box-shadow: 0px 0px 7px rgb(255, 1, 1) !important;
+    border: 1px solid rgb(255, 1, 1) !important;
+}
+
+.validstyle {
+    box-shadow: 0px 0px 7px rgb(52, 255, 1) !important;
+    border: 1px solid rgb(52, 255, 1) !important;
+}
+
+/* ----------------------------------------- */
+
+#taskList>li {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin: 5px 0;
+    box-shadow: 0px 1px 4px black;
+    background-color: rgba(255, 255, 255, 0.616);
+    padding-left: 10px;
+}
+
+#taskList>li:first-child {
+    background: none;
+    box-shadow: none;
+}
+
+li>* {
+    height: var(--line-h);
+    line-height: var(--line-h);
+    text-align: center;
+    padding: 0 10px;
+}
+
+li>div {
+    width: 100%;
+    text-align: left;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.doneStyle {
+    background-color: rgba(142, 253, 127, 0.151) !important;
+}
+
+.doneStyle>div {
+    opacity: 0.7;
+    color: rgb(0, 68, 0);
+    text-decoration: line-through;
+}
